@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎫</text></svg>">
+  <link rel="stylesheet" href="/css/issuer.css">
+  <script defer src="/js/issuer.js"></script>
+  <title>Private State Token Issuer DEMO</title>
+</head>
+<body>
+  <main>
+    <h1>Private State Token Issuer DEMO</h1>
+    <section>
+      <form>
+        <fieldset>
+          <legend>Are you a human?</legend>
+          <input id="yes" type="checkbox" name="human">
+          <label for="yes">Yes! I'm a human</label>
+        </fieldset>
+      </form>
+      <ul>
+        <li id="issuing">📝 Issuing token...</li>
+        <li id="issued">🎉 Successfully issued!</li>
+        <li id="back">🔙 Now go back to the redemption demo.</li>
+      </ul>
+      <button id="refresh">Clear token</button>
+    </section>
+  </main>
+  <footer>
+    <p><a href="/.well-known/trust-token/key-commitment">View key commitment data</a></p>
+    <p><a href="https://private-state-token-demo.glitch.me">More information about this demo</a></p>
+    <p><em>Please note:</em> These demos do not provide code suitable for production use. The&nbsp;Trust&nbsp;Tokens API is still experimental, and is undergoing an <a href="https://web.dev/origin-trials">origin trial</a> in Chrome. The API and the demos may change without notice at any time.</p>
+    <p>This is not a Google product.</p>
+  </footer>
+</body>
+</html>

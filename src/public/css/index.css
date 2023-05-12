@@ -1,0 +1,16 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 50vw;
+  margin: 0 auto;
+  color: #555;
+}
+
+h1 {
+  color: lightgreen;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    width: 90vw;
+  }
+}
