@@ -1,3 +1,19 @@
+/*
+ Copyright 2023 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
+
 // DSP
 import express from "express"
 import { readFileSync } from "fs"
@@ -128,17 +144,17 @@ app.get("/", async (req, res) => {
     case "private-state-token-demo.glitch.me":
       return res.render("index", {
         title: "home",
-        detail: "detail",
+        detail: "detail"
       })
     case "private-state-token-issuer.glitch.me":
       return res.render("issuer", {
         title: "issuer",
-        detail: "detail",
+        detail: "detail"
       })
     case "private-state-token-redeemer.glitch.me":
       return res.render("redeemer", {
         title: "redeemer",
-        detail: "detail",
+        detail: "detail"
       })
     default:
       console.error(`invalid domain ${host}`)
