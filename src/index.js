@@ -5,7 +5,7 @@ import { promisify } from "util"
 import { resolve } from "path"
 import * as childProcess from "child_process"
 import * as sfv from "structured-field-values"
-const { EXTERNAL_PORT, PORT } = process.env
+const PORT = process.env.PORT || 3000
 
 const exec = promisify(childProcess.exec)
 const protocol_version = "PrivateStateTokenV1VOPRF"
@@ -129,19 +129,16 @@ app.get("/", async (req, res) => {
       return res.render("index", {
         title: "home",
         detail: "detail",
-        EXTERNAL_PORT
       })
     case "private-state-token-issuer.glitch.me":
       return res.render("issuer", {
         title: "issuer",
         detail: "detail",
-        EXTERNAL_PORT
       })
     case "private-state-token-redeemer.glitch.me":
       return res.render("redeemer", {
         title: "redeemer",
         detail: "detail",
-        EXTERNAL_PORT
       })
     default:
       console.error(`invalid domain ${host}`)
