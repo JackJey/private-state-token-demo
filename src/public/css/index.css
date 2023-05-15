@@ -23,7 +23,7 @@ body {
   line-height: 3rem;
 }
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
   body {
     width: 90vw;
   }
