@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <!--
  Copyright 2023 Google LLC
 
@@ -15,24 +14,60 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  -->
-
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/css/index.css" />
-    <link rel="icon" href="/img/favicon.ico" />
-    <script type="text/javascript" src="/js/main.js"></script>
-  </head>
 
-  <body>
-    <h1>hello <%= title %></h1>
-    <p><%= detail %></p>
-    <ul>
-      <li><a href=https://private-state-token-demo.glitch.me>private-state-token-demo.glitch.me</a></li>
-      <li><a href=https://private-state-token-issuer.glitch.me>private-state-token-issuer.glitch.me</a></li>
-      <li><a href=https://private-state-token-redeemer.glitch.me>private-state-token-redeemer.glitch.me</a></li>
-    </ul>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕵️</text></svg>" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <title>Private State Token DEMO</title>
+</head>
+
+<body>
+  <main>
+    <article>
+
+      <h1>Private State Token DEMO</h1>
+
+      <p> These demos use PrivateStateTokenV1VOPRF of the <a href=https://wicg.github.io/trust-token-api />Private State Token API</a> for issuance and redemption and <a href="https://boringssl.googlesource.com/boringssl/">BoringSSL</a> to create an issuance service. </p>
+      <section>
+
+        <h2>How to run the demos</h2>
+
+        <ol>
+          <li>Open the <a href="https://private-state-token-redeemer.glitch.me/">🛂 Private State Token Redeemer demo</a> with Chrome</li>
+          <li>Click a <em>"click continue to read"</em></li>
+          <li> If your browser doesn't have a token, click a link to <a href="https://private-state-token-issuer.glitch.me/">🎫 Private State Token Issuer demo</a>. </li>
+          <li>Click a <em>Yes I'm a Human</em> to issue a new token</li>
+          <li>Redirect back to Redeemer</li>
+          <li>Click a <em>"click continue to read"</em> again, then you can read more !</li>
+        </ol>
+      </section>
+      <section>
+
+        <h2>Source Code</h2>
+
+        <ul>
+          <li><a href="https://github.com/JackJey/private-state-token-demo">JackJey/private-state-token-demo</a></li>
+          <li><strong>This is not a Google product.</strong></li>
+        </ul>
+      </section>
+      <section>
+
+        <h2>Find out more</h2>
+
+        <ul>
+          <li><a href="https://github.com/WICG/trust-token-api">Private State Token API explainer</a></li>
+          <li><a href="https://www.chromium.org/updates/trust-token">The Chromium Projects: Private State Token API</a></li>
+          <li><a href="https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md">Origin Trials Guide for Web Developers</a></li>
+          <li><a href="https://boringssl.googlesource.com/boringssl/">BoringSSL</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+
 </html>

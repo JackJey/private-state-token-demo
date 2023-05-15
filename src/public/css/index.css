@@ -19,13 +19,11 @@ body {
   width: 50vw;
   margin: 0 auto;
   color: #555;
+  font-size: 1.4rem;
+  line-height: 3rem;
 }
 
-h1 {
-  color: lightgreen;
-}
-
-@media screen and (max-width: 900px) {
+@media (min-width: 800px) {
   body {
     width: 90vw;
   }

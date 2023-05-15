@@ -142,20 +142,11 @@ app.get("/", async (req, res) => {
   console.log({ host })
   switch (host) {
     case "private-state-token-demo.glitch.me":
-      return res.render("index", {
-        title: "home",
-        detail: "detail"
-      })
+      return res.render("index")
     case "private-state-token-issuer.glitch.me":
-      return res.render("issuer", {
-        title: "issuer",
-        detail: "detail"
-      })
+      return res.render("issuer")
     case "private-state-token-redeemer.glitch.me":
-      return res.render("redeemer", {
-        title: "redeemer",
-        detail: "detail"
-      })
+      return res.render("redeemer")
     default:
       console.error(`invalid domain ${host}`)
       return
