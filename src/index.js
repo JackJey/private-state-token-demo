@@ -22,6 +22,7 @@ import { resolve } from "path"
 import * as childProcess from "child_process"
 import * as sfv from "structured-field-values"
 const PORT = process.env.PORT || 3000
+const BASE64FORMAT = /^[a-zA-Z0-9+/=]+$/
 
 const exec = promisify(childProcess.exec)
 const protocol_version = "PrivateStateTokenV1VOPRF"
@@ -82,6 +83,9 @@ app.get(`/private-state-token/issuance`, async (req, res) => {
   console.log(req.headers)
   const sec_private_state_token = req.headers["sec-private-state-token"]
   console.log({ sec_private_state_token })
+  if (sec_private_state_token.match(BASE64FORMAT) === null) {
+    return res.sendStatus(400)
+  }
 
   const result = await exec(`${resolve("./")}/bin/main --issue ${sec_private_state_token}`)
   const token = result.stdout
@@ -102,6 +106,9 @@ app.get(`/private-state-token/redemption`, async (req, res) => {
 
   const sec_private_state_token = req.headers["sec-private-state-token"]
   console.log({ sec_private_state_token })
+  if (sec_private_state_token.match(BASE64FORMAT) === null) {
+    return res.sendStatus(400)
+  }
 
   const result = await exec(`${resolve("./")}/bin/main --redeem ${sec_private_state_token}`)
   console.log({ result })
