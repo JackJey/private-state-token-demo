@@ -38,11 +38,11 @@
         <h2>How to run the demos</h2>
 
         <p>Setup Chrome for enable Private State Token API & Register key-commitment of Issuer</p>
-        <pre>$ open -a Google\ Chrome\ Dev \
+        <pre>$ open -a Google\ Chrome \
   --args \
-  --enable-blink-features=PrivateStateTokens,PrivateStateTokensAlwaysAllowIssuance,PrivacySandboxSettings3 \
-  --additional-private-state-token-key-commitments='{ "https://private-state-token-issuer.glitch.me": { "PrivateStateTokenV1VOPRF": { "protocol_version": "PrivateStateTokenV1VOPRF", "id": 1, "batchsize": 1, "keys": { "1": { "Y": "AAAAAQQ7W5gOubJT3kTpzNGsekT9RZPXgXGrOMB2+QPw/ZzAuLrM3kc8eyHuTc1KmKjH4sh5+ev5GCI4HVVd46o6rWvNvk0iZQtVuUPhT8X54Ajebng8v5zUnpnPuTjGqlc7+MM=", "expiry": "1715356984440000" } } } } }'</pre>
-
+  --enable-features=PrivateStateTokens,PrivateStateTokensAlwaysAllowIssuance,PrivacySandboxSettings3 \
+  --additional-private-state-token-key-commitments='{ "https://private-state-token-issuer.glitch.me": { "PrivateStateTokenV1VOPRF": { "protocol_version": "PrivateStateTokenV1VOPRF", "id": 1, "batchsize": 1, "keys": { "1": { "Y": "AAAAAQQ7W5gOubJT3kTpzNGsekT9RZPXgXGrOMB2+QPw/ZzAuLrM3kc8eyHuTc1KmKjH4sh5+ev5GCI4HVVd46o6rWvNvk0iZQtVuUPhT8X54Ajebng8v5zUnpnPuTjGqlc7+MM=", "expiry": "1715356984440000" } } } } }'
+        </pre>
         <ol>
           <li>Open the <a href="https://private-state-token-redeemer.glitch.me/">🛂 Private State Token Redeemer demo</a> with Chrome</li>
           <li>Click a <em>"click continue to read"</em></li>
